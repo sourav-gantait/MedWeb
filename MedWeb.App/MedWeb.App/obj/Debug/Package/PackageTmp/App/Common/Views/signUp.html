@@ -1,0 +1,239 @@
+﻿<div class="form-login" role="form" ng-controller="signUp as vm">
+    <h2 class="form-login-heading align-center">Sign Up</h2>
+    <form ng-show="vm.toggleStep1">
+        <div class="row">
+            <div class="col-md-3">
+                <h3 class="form-login-heading">User Details</h3>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="First Name" data-ng-model="vm.registration.FirstName" required autofocus>
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Middle Name" data-ng-model="vm.registration.MiddleName">
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Last Name" data-ng-model="vm.registration.LastName" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="date" class="form-control" placeholder="DOB" data-ng-model="vm.registration.DOB" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Adhar Id" data-ng-model="vm.registration.AdharId">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="PAN Number" data-ng-model="vm.registration.PanId">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Voter Id" data-ng-model="vm.registration.VoterId">
+                </div>
+
+              
+
+            </div>
+            <div class="col-md-3">
+                <h3 class="form-login-heading">Address</h3>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Country" data-ng-model="vm.registration.Country" required autofocus>
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="State" data-ng-model="vm.registration.State">
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Zip" data-ng-model="vm.registration.Zip" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Area" data-ng-model="vm.registration.Area">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="AddressLine1" data-ng-model="vm.registration.AddressLine1" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="AddressLine2" data-ng-model="vm.registration.AddressLine2">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="AddressLine3" data-ng-model="vm.registration.AddressLine3">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Landmark" data-ng-model="vm.registration.Landmark">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3 class="form-login-heading">Contacts</h3>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Mobile1" data-ng-model="vm.registration.Mobile1" required autofocus>
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Mobile2" data-ng-model="vm.registration.Mobile2">
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Landline" data-ng-model="vm.registration.Landline">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Primary Email" data-ng-model="vm.registration.PrimaryEmail" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Secondary Email" data-ng-model="vm.registration.SecondaryEmail">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Linkedin" data-ng-model="vm.registration.Linkedin" />
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Facebook" data-ng-model="vm.registration.Facebook">
+                </div>
+
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Twitter" data-ng-model="vm.registration.Twitter">
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <h3 class="form-login-heading">Passport Details</h3>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="UId" data-ng-model="vm.registration.UId" required autofocus>
+                </div>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Location" data-ng-model="vm.registration.Location" required>
+                </div>
+                <div class="padding-10">
+                    <input type="date" class="form-control" placeholder="IssueDate" data-ng-model="vm.registration.IssueDate" required>
+                </div>
+
+                <div class="padding-10">
+                    <input type="date" class="form-control" placeholder="ExpiryDate" data-ng-model="vm.registration.ExpiryDate" required>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                &nbsp;
+            </div>
+            <div class="col-md-3">
+                <div class="padding-10">
+                    <button class="btn btn-info  btn-form" type="button" data-ng-click="vm.showStep2()">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form ng-show="vm.toggleStep2">
+        <div class="row">
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+            <div class="col-md-4">
+                <h3 class="form-login-heading">Upload profile photo</h3>
+                <div class="padding-10">
+                    <div>
+                        <label>Result Image Quality (0<=X<=1): <input type="text" ng-model="vm.resImgQuality" /></label>
+                    </div>
+                    <form ng-show="true">
+                        <label for="fileInput">Select Image:</label>
+                        <input type="file" id="fileInput" />
+                        <button type="reset">Clear</button>
+                        <button ng-click="vm.imageDataURI='test.jpg'">Set Test Image</button>
+                    </form>
+                    <div>
+                        <label>Image URL: <input type="text" ng-model="vm.edtImageURI" /></label>
+                        <button ng-click="vm.imageDataURI=vm.edtImageURI">Set Image</button>
+                    </div>
+                    <div>
+                        <button ng-click="vm.imageDataURI=''">Reset Image</button>
+                    </div>
+                    <div ng-if="enableCrop" class="cropArea" ng-class="{'big':vm.size=='big', 'medium':vm.size=='medium', 'small':vm.size=='small'}">
+                        <img-crop image="vm.registration.Photo"
+                                  result-image="$parent.resImageDataURI"
+                                  change-on-fly="vm.changeOnFly"
+                                  area-type="{{vm.type}}"
+                                  area-min-size="selMinSize"
+                                  result-image-format="{{vm.resImgFormat}}"
+                                  result-image-quality="vm.resImgQuality"
+                                  result-image-size="vm.resImgSize"
+                                  on-change="vm.onChange($dataURI)"
+                                  on-load-begin="vm.onLoadBegin()"
+                                  on-load-done="vm.onLoadDone()"
+                                  on-load-error="vm.onLoadError()"></img-crop>
+                        <!--aspect-ratio="aspectRatio"-->
+                    </div>
+                    <div style="text-align:center">
+                        <h3>Result</h3>
+                        <div>
+                            <img ng-src="{{vm.resImageDataURI}}" />
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="padding-10">
+                    <input type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required>
+                </div>-->
+                <div class="padding-10 div-submit-btn">
+                    <button class="btn btn-info btn-form" type="button" data-ng-click="vm.showStep1()">Back</button>
+                </div>
+                <div class="padding-10 div-submit-btn">
+                    <button class="btn btn-info btn-form" type="button" data-ng-click="vm.showStep3()">Proceed</button>
+                </div>
+                <div data-ng-hide="vm.message == ''" data-ng-class="(vm.savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                    {{vm.message}}
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+    </form>
+
+    <form ng-show="vm.toggleStep3">
+        <div class="row">
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+            <div class="col-md-4">
+                <h3 class="form-login-heading">Create Login</h3>
+                <div class="padding-10">
+                    <input type="text" class="form-control" placeholder="Username" data-ng-model="vm.registration.LoginId" required autofocus>
+                </div>
+                <div class="padding-10">
+                    <input type="password" class="form-control" placeholder="Password" data-ng-model="vm.registration.Password" required>
+                </div>
+                <!--<div class="padding-10">
+                    <input type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required>
+                </div>-->
+                <div class="padding-10 div-submit-btn">
+                    <button class="btn btn-info btn-form" type="button" data-ng-click="vm.showStep2()">Back</button>
+                </div>
+                <div class="padding-10 div-submit-btn">
+                    <button class="btn btn-info btn-form" type="button" data-ng-click="vm.signUp()">Submit</button>
+                </div>
+                <div data-ng-hide="vm.message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                    {{vm.message}}
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+    </form>
+</div>
+
