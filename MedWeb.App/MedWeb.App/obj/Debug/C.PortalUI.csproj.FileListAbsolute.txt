@@ -1,0 +1,12 @@
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.dll.config
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.dll
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.pdb
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.csprojResolveAssemblyReference.cache
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.dll
+C:\D Drive\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.pdb
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.dll.config
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.dll
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\bin\C.PortalUI.pdb
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.csprojResolveAssemblyReference.cache
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.dll
+D:\Personal\Projects\Collaboration Portal\Source\PortalUI_lib\C.PortalUI\C.PortalUI\obj\Debug\C.PortalUI.pdb
