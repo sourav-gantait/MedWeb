@@ -15,14 +15,15 @@
             <div class="col-md-3">
                 &nbsp;
             </div>
-            <div class="col-md-6">
-
-
-                <span>Location : </span>
-                <select name="location" ng-model="location" ng-options="location in locations">
+            <div class="col-md-1">
+                <div class="padding-10" style>
+                    <span>Location : </span>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <select name="location" ng-model="location" ng-options="location.name for location in locations">
                     <option value="">location</option>
                 </select>
-
             </div>
             <div class="col-md-3">
                 &nbsp;
@@ -36,7 +37,7 @@
                 <div class="padding-10">
                     <span>Everyday :</span>
                 </div>
-                
+
             </div>
             <div class="col-md-5">
                 <div class="padding-10">
@@ -51,10 +52,49 @@
                     <span>To Time</span>
                     <input type="time" ng-model="1sttoTime" />
                 </div>
+                <div class="padding-10">
+                    <span>From time</span>
+                    <input type="time" ng-model="1stfrTime" />
+                    <span>To Time</span>
+                    <input type="time" ng-model="1sttoTime" />
+                </div>
             </div>
             <div class="col-md-3">
                 &nbsp;
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                &nbsp;
+            </div>
+            <div class="col-md-1">
+                <div class="padding-10">
+                    <span>Weekly</span>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-sm-12">
+                        Recur
+
+                        <input type="radio" name="everyWeek" ng-model="everyweek" />Every Week
+                        
+                    <input type="radio" name="everyweek" ng-model="optionweek" />
+                        <input type="checkbox" name="first" ng-model="firstweek" />1st
+                    <input type="checkbox" name="second" ng-model="secondweek" />2nd
+                    <input type="checkbox" name="third" ng-model="thirdweek" />3rd
+                    <input type="checkbox" name="fourth" ng-model="fourthweek" />4th
+                    <input type="checkbox" name="fifth" ng-model="fifthweek" />5th
+                    
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            &nbsp;
+        </div>
         </div>
 
     </form>
