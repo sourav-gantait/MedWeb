@@ -1,11 +1,11 @@
-﻿<div class="form-available" role="form" ng-controller="available">
-    <form name="availableDoctor">
+﻿<div class="form-unavailable" role="form" ng-controller="unavailable">
+    <form>
         <div class="row">
             <div class="col-md-4">
                 &nbsp;
             </div>
             <div class="col-md-4 align-center">
-                <h3 class="form-available-heading">Availability Set Up</h3>
+                <h3>Unavailability Setup</h3>
             </div>
             <div class="col-md-4">
                 &nbsp;
@@ -16,16 +16,18 @@
                 &nbsp;
             </div>
             <div class="col-md-1">
-                <div class="padding-10" style>
-                    <span>Location : </span>
+                <div class="padding-10">
+                    <span>Location :</span>
                 </div>
             </div>
-            <div class="col-md-5">
-                <select name="location" ng-model="location" ng-options="location.name for location in locations">
-                    <option value="">location</option>
-                </select>
+            <div class="col-md-4">
+                <div class="padding-10">
+                    <select name="location" ng-model="locations" ng-options="location.name for location in locations">
+                        <option value="">location</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 &nbsp;
             </div>
         </div>
@@ -40,28 +42,24 @@
 
             </div>
             <div class="col-md-4">
-                <div class="padding-4">
+                <div class="padding-10">
                     <span>From</span>
-                    <input kendo-time-picker id="time" ng-model="fromTime" style="width:25%" />
+                    <input kendo-time-picker id="time" ng-model="fromTime" style="width: 30%;" />
                     <span>To</span>
-                    <input kendo-time-picker id="time" ng-model="toTime" style="width:25%" />
+                    <input kendo-time-picker id="time" ng-model="toTime" style="width: 30%;" />
                     <button name="time" ng-model="value.time" ng-click="addTime()">Add Time</button>
                 </div>
-
             </div>
             <div class="col-md-4">
+
                 <div>
                     <ul>
-                        <li ng-repeat="fromtime in fromtimeList">{{fromtime}}<button ng-click="removeEverydayTime(fromtime)">x</button>
-                        </li>
-
+                        <li ng-repeat="time in timeList">{{time}}
+                            <button ng-click="removeEverydayTime(time)">x</button></li>
                     </ul>
                 </div>
-
             </div>
-            
         </div>
-
         <div id="weekly"></div>
         <div id="container">
             <div class="row">
@@ -78,25 +76,21 @@
 
                 <div class="col-md-4">
                     <div class="padding-10">
-                        <div class="row">
-                            <span>Recur :</span>
-                            <input type="radio" name="everyWeek" ng-model="everyweek" value="every" ng-change="weeksunchecked()" />Every Week
-                        
+
+                        <span>Recur :</span>
+                        <input type="radio" name="everyweek" ng-model="everyweek" value="every" ng-change="weeksunchecked()" />Every Week
                     <input type="radio" name="everyweek" ng-model="everyweek" value="option" />
-                            <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="firstweek" ng-disabled="everyweek=='every'" />1st
+                        <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="firstweek" ng-disabled="everyweek=='every'" />1st
                     <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="secondweek" ng-disabled="everyweek=='every'" />2nd
                     <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="thirdweek" ng-disabled="everyweek=='every'" />3rd
                     <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="fourthweek" ng-disabled="everyweek=='every'" />4th
                     <input type="checkbox" name="checkweek" ng-checked="yes" ng-model="fifthweek" ng-disabled="everyweek=='every'" />5th
                     
-                    
-                    
-                        </div>
+                        
                     </div>
-                    <div class="row">
-                        &nbsp;
-                    </div>
-                    <div class="row">
+
+
+                    <div class="padding-10">
                         <input type="checkbox" name="checkday" ng-model="sunday" />Sun
                     <input type="checkbox" name="checkday" ng-model="monday" />Mon
                     <input type="checkbox" name="checkday" ng-model="tuesday" />Tue
@@ -106,76 +100,69 @@
                     <input type="checkbox" name="checkday" ng-model="satday" />Sat
                     <button name="addweeklyButton" ng-model="addweekly" ng-click="cloneweekly()">+Add Weekly</button>
                     </div>
+
                 </div>
                 <div class="col-md-4">
-
-                    <div>
-                        <span>From time</span>
-                        <input kendo-time-picker id="time" ng-model="weeklyFromTime" style="width:30%" />
-                        <span>To Time</span>
-                        <input kendo-time-picker id="time" ng-model="weeklyToTime" style="width:30%" />
+                    <div class="padding-10">
+                        <div>
+                            <span>From time</span>
+                            <input kendo-time-picker id="time" ng-model="weeklyfromTime" style="width:30%"/>
+                            <span>To Time</span>
+                            <input kendo-time-picker id="time" ng-model="weeklytoTime" style="width:30%"/>
+                        </div>
                     </div>
                     <div>
-                        <button name="weeklyTimeAdd" ng-model="weeklyAddTime" ng-click="addTimeforWeekly()">Add Time</button>
+                        <button ng-model="weeklytimeAdd" ng-click="addWeeklyTime()">Add time</button>
                     </div>
                     <div>
                         <ul>
-                            <li ng-repeat="weeklytime in timeForWeekly">{{weeklytime}}<button ng-click="removeWeeklyTime(weeklytime)">x</button></li>
+                            <li ng-repeat="weeklytime in weeklytimeList">{{weeklytime}}
+                                <button ng-click="removeTime(weeklytime)">x</button></li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
-        <div id="monthly"></div>
-        <div id="monthlycontainer">
-            <div class="row">
-                <div class="col-md-3">
-                    &nbsp;
+        <div class="row">
+            <div class="col-md-3">
+                &nbsp;
+            </div>
+            <div class="col-md-1">
+                <div class="padding-10">
+                    <span>Monthly</span>
                 </div>
-                <div class="col-md-1">
-                    <div class="padding-7">
-                        <span>Monthly</span>
-                    </div>
-                </div>
-                <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                
+                <div class="padding-10">
                     <div class="demo section k-content">
                         <h4>Add a date:</h4>
                         <input kendo-date-picker
                             ng-model="dateString"
                             k-ng-model="dateObject" />
-                        <div>{{ dateObject | date:"EEEE, MMMM d, yyyy"}}</div>
-
-                        <div>
-                            <button id="addmonthly" ng-click="addDate()">+Add Date</button>
-                        </div>
-                        <div>
-                            <ol>
-                                <li ng-repeat="date in dateList">{{date | date:"EEEE, MMMM d, yyyy"}}
-                                    <button ng-click="removeDate(date)">x</button></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="padding-7">
-                        <span>From time</span>
-                        <input kendo-time-picker id="time" ng-model="monthlyFromTime" style="width:30%"/>
-                        <span>To Time</span>
-                        <input kendo-time-picker id="time" ng-model="monthlyToTime" style="width:30%"/>
+                        {{ dateString }}
                     </div>
                     <div>
-                        <button name="monthlytime" ng-model="monthlytimeAdd" ng-click="addTimeForMonthly()">Add Time</button>
+                        <button id="addmonthly" ng-click="addDate()">+Add Date</button>
                     </div>
                     <div>
                         <ul>
-                            <li ng-repeat="monthlytime in timeforMonthly">{{monthlytime}}<button ng-click="removeMonthlyTime(monthlytime)">x</button></li>
+                            <li ng-repeat="date in dateList">{{date | date:"EEEE, MMMM d, yyyy " }}
+                                <button ng-click="removeDate(date)">x</button></li>
                         </ul>
+
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-4">
+                <div class="padding-10">
+                    <span>From time</span>
+                    <input id="time" ng-model="fromTime" />
+                    <span>To Time</span>
+                    <input type="time" ng-model="toTime" />
+                </div>
 
+            </div>
+        </div>
     </form>
 </div>

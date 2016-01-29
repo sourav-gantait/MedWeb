@@ -8,3 +8,8 @@ E:\MedWeb.App\MedWeb.App\MedWeb.App\bin\MedWeb.Clent.pdb
 E:\MedWeb.App\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Client.csprojResolveAssemblyReference.cache
 E:\MedWeb.App\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Clent.dll
 E:\MedWeb.App\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Clent.pdb
+C:\Users\Sourendra\Documents\GitHub\MedWeb\MedWeb.App\MedWeb.App\bin\MedWeb.Clent.dll
+C:\Users\Sourendra\Documents\GitHub\MedWeb\MedWeb.App\MedWeb.App\bin\MedWeb.Clent.pdb
+C:\Users\Sourendra\Documents\GitHub\MedWeb\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Client.csprojResolveAssemblyReference.cache
+C:\Users\Sourendra\Documents\GitHub\MedWeb\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Clent.dll
+C:\Users\Sourendra\Documents\GitHub\MedWeb\MedWeb.App\MedWeb.App\obj\Debug\MedWeb.Clent.pdb

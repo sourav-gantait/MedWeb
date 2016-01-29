@@ -115,16 +115,28 @@
                         content: '<i class="fa fa-lock"></i> Scheduling'
                 }
             }, {
-                url: '/availability',
+                url: '/Availability',
                 config: {
                     title: 'Availability',
                     templateUrl: 'App/Modules/Schedule/Views/availability.html',
-                    url: '/availability',
+                    url: '/Availability',
                     nav: 3,
                     parentId: 3,
                     level: 2,
                     navIndex: 24,
                     content: '<i class="fa fa-lock"></i> Availability'
+                }
+            }, {
+                url: '/Unavailability',
+                config: {
+                    title: 'Unavailability',
+                    templateUrl: 'App/Modules/Schedule/Views/unavailability.html',
+                    url: '/Unavailability',
+                    nav: 3,
+                    parentId: 3,
+                    level: 2,
+                    navIndex: 25,
+                    content: '<i class="fa fa-lock"></i> Unavailability'
                 }
             }
         ];
