@@ -23,7 +23,7 @@
             <div class="col-md-4">
                 <div class="padding-10">
                     <select name="location" ng-model="location" class="form-control" style="width: 45%" ng-options="location.name for location in locations">
-                        <option value="">location</option>
+                        <option value="">Location</option>
                     </select>
                 </div>
             </div>
@@ -60,12 +60,16 @@
                 <div class="padding-10">
                     <ul>
                         <li ng-repeat="time in fromtimeList" style="width: 60%">{{time.fromTime}}-{{time.toTime}}
-                            <button type="button" ng-click="removeEverydayTime(time)" class="btn btn-danger btn-xs" style="float: right;">x</button>
+                            <button type="button" ng-click="removeEverydayTime(time)" class="btn btn-danger btn-xs " style="float: right;">x</button>
                         </li>
 
                     </ul>
                 </div>
-
+                <style>
+                    .btn {
+                        border-radius: 3px !important;
+                    }
+                </style>
             </div>
         </div>
         <div class="row">
@@ -187,8 +191,7 @@
                             <div class="demo section k-content">
                                 <input kendo-date-picker
                                     ng-model="dateString"
-                                    k-ng-model="dateObject" 
-                                    k-parse-formats ="['yyyy-MM-ddTHH:mm:sszzz']"/>
+                                    k-ng-model="dateObject" />
 
                             </div>
                         </div>
@@ -204,7 +207,7 @@
                     <div class="col-sm-8">
                         <div class="padding-10">
                             <ul>
-                                <li ng-repeat="date in dateList">{{date | date:"EEEE, MMMM d, yyyy"}}
+                                <li ng-repeat="date in dateList">{{date.date | date:"EEEE, MMMM d, yyyy"}}
                                 <button type="button" ng-click="removeDate(date)" class="btn btn-danger btn-xs" style="float: right;">x</button></li>
                             </ul>
                         </div>

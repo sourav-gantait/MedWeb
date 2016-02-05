@@ -23,7 +23,7 @@
             <div class="col-md-4">
                 <div class="padding-10">
                     <select name="location" ng-model="locations" class="form-control" style="width: 45%" ng-options="location.name for location in locations">
-                        <option value="">location</option>
+                        <option value="">Location</option>
                     </select>
                 </div>
             </div>
@@ -47,9 +47,9 @@
             <div class="col-md-5">
                 <div class="padding-10">
                     <span>From</span>
-                    <input kendo-time-picker id="time" ng-model="fromTime" style="width: 25%;" />
+                    <input kendo-time-picker id="time" class="form-control" ng-model="fromTime" style="width: 25%;" />
                     <span>To</span>
-                    <input kendo-time-picker id="time" ng-model="toTime" style="width: 25%;" />
+                    <input kendo-time-picker id="time" class="form-control" ng-model="toTime" style="width: 25%;" />
                     <button type="button" class="btn btn-info btn-form" style="float: right;" ng-model="value.time" ng-click="addTime()">Add Time</button>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-1">
                     <div class="padding-10">
-                        <span>Weekly</span>
+                        <span>Weekly :</span>
                     </div>
                 </div>
 
@@ -133,9 +133,9 @@
                         <div class="padding-10">
 
                             <span>From </span>
-                            <input kendo-time-picker id="time" ng-model="weeklyfromTime" style="width: 38%" />
+                            <input kendo-time-picker id="time" class="form-control" ng-model="weeklyfromTime" style="width: 38%" />
                             <span>To </span>
-                            <input kendo-time-picker id="time" ng-model="weeklytoTime" style="width: 38%" />
+                            <input kendo-time-picker id="time" class="form-control" ng-model="weeklytoTime" style="width: 38%" />
 
 
                             <div class="padding-10">
@@ -155,13 +155,21 @@
             <div class="row">
                 &nbsp;
             </div>
+            <style>
+                .form-control {
+                    border-radius: 3px !important;
+                }
+                    .btn {
+                        border-radius: 3px !important;
+                    }
+                </style>
             <div class="row">
                 <div class="col-md-3">
                     &nbsp;
                 </div>
                 <div class="col-md-1">
                     <div class="padding-10">
-                        <span>Monthly</span>
+                        <span>Monthly :</span>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -173,7 +181,7 @@
                                     <input kendo-date-picker
                                         ng-model="dateString"
                                         k-ng-model="dateObject"
-                                        k-parse-formats ="['yyyy-MM-ddTHH:mm:sszzz']" />
+                                        class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -201,9 +209,9 @@
                     <div class="row">
                         <div class="padding-10">
                             <span>From </span>
-                            <input kendo-time-picker id="monthlyfromTime" ng-model="monthlyfromTime" style="width: 38%" />
+                            <input kendo-time-picker id="monthlyfromTime" class="form-control" ng-model="monthlyfromTime" style="width: 38%" />
                             <span>To </span>
-                            <input kendo-time-picker id="monthlytoTime" ng-model="monthlytoTime" style="width: 38%" />
+                            <input kendo-time-picker id="monthlytoTime" class="form-control" ng-model="monthlytoTime" style="width: 38%" />
                             <div class="padding-10">
                                 <button type="button" ng-model="monthlytimeAdd" class="btn btn-info btn-form" ng-click="addTimeForMonthly()" style="float: right;">Add Time</button>
                             </div>
