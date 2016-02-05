@@ -44,7 +44,10 @@
                 </div>
 
                 <div class="padding-10">
-                    <button class="btn btn-info  btn-form" type="button" data-ng-click="vm.showStep2()"
+                    <button class="btn btn-info  btn-form" ng-class="{disabled: userDetails.DOB.$error.required || userDetails.LastName.$error.required ||
+                        userDetails.FirstName.$error.required ||
+                        userDetails.LastName.$error.maxlength ||
+                        userDetails.FirstName.$error.maxlength}" type="button" data-ng-click="vm.showStep2()"
                         ng-disabled="userDetails.DOB.$error.required || 
                         userDetails.LastName.$error.required ||
                         userDetails.FirstName.$error.required ||
@@ -52,7 +55,7 @@
                         userDetails.FirstName.$error.maxlength">Proceed</button>
                 </div>
                 <style>
-                    .btn btn-info btn-form[disabled] {
+                    .btn disabled {
                         background-color:chocolate;
                     }
                 </style>

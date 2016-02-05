@@ -22,14 +22,13 @@ app.controller("available", function ($scope) {
         var weeklydiv = angular.element('#container');
         weeklycon.append(weeklydiv.clone());
     };
-    $scope.monthlyclone = function () {
-        var monthlywrap = angular.element('#monthly');
-        var monthlydiv = angular.element('#monthlycontainer');
-        monthlywrap.append(monthlydiv.clone());
-    };
+    
     $scope.dateList = [];
     $scope.addDate = function () {
-        $scope.dateList.push($scope.dateObject);
+        var tempDate = {
+            date: $scope.dateObject
+        };
+        $scope.dateList.push(tempDate);
     };
     $scope.removeDate = function (date) {
         var index = $scope.dateList.indexOf(date);
@@ -37,15 +36,27 @@ app.controller("available", function ($scope) {
     };
     $scope.fromtimeList = [];
     $scope.addTime = function () {
-        $scope.fromtimeList.push($scope.fromTime+" - "+$scope.toTime);
+        var tempTimeforEveryday={
+            fromTime: $scope.fromTime,
+            toTime: $scope.toTime
+        };
+        $scope.fromtimeList.push(tempTimeforEveryday);
     };
     $scope.timeForWeekly = [];
     $scope.addTimeforWeekly = function () {
-        $scope.timeForWeekly.push($scope.weeklyFromTime+" - "+$scope.weeklyToTime);
+        var tempTime = {
+            fromTime: $scope.weeklyFromTime,
+            toTime: $scope.weeklyToTime
+        };
+        $scope.timeForWeekly.push(tempTime);
     };
     $scope.timeforMonthly = [];
     $scope.addTimeForMonthly = function () {
-        $scope.timeforMonthly.push($scope.monthlyFromTime+" - "+$scope.monthlyToTime);
+        var tempTimeforMonthly = {
+            fromTime: $scope.monthlyFromTime,
+            toTime: $scope.monthlyToTime
+        };
+        $scope.timeforMonthly.push(tempTimeforMonthly);
     };
     $scope.removeEverydayTime = function (fromtime) {
         var index = $scope.fromtimeList.indexOf(fromtime);
