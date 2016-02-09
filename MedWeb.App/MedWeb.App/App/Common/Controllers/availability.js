@@ -37,24 +37,24 @@ app.controller("available", function ($scope) {
     $scope.fromtimeList = [];
     $scope.addTime = function () {
         var tempTimeforEveryday={
-            fromTime: $scope.fromTime,
-            toTime: $scope.toTime
+            fromTimeEveryday: $scope.fromTime,
+            toTimeEveryday: $scope.toTime
         };
         $scope.fromtimeList.push(tempTimeforEveryday);
     };
     $scope.timeForWeekly = [];
     $scope.addTimeforWeekly = function () {
         var tempTime = {
-            fromTime: $scope.weeklyFromTime,
-            toTime: $scope.weeklyToTime
+            fromTimeWeekly: $scope.weeklyFromTime,
+            toTimeWeekly: $scope.weeklyToTime
         };
         $scope.timeForWeekly.push(tempTime);
     };
     $scope.timeforMonthly = [];
     $scope.addTimeForMonthly = function () {
         var tempTimeforMonthly = {
-            fromTime: $scope.monthlyFromTime,
-            toTime: $scope.monthlyToTime
+            fromTimeMonthly: $scope.monthlyFromTime,
+            toTimeMonthly: $scope.monthlyToTime
         };
         $scope.timeforMonthly.push(tempTimeforMonthly);
     };

@@ -1,5 +1,14 @@
 ﻿<div class="form-group" role="form" ng-controller="available">
     <form name="availableDoctor" role="form">
+        <style>
+                .form-control {
+                    border-radius: 3px !important;
+                }
+
+                .btn {
+                    border-radius: 3px !important;
+                }
+            </style>
         <div class="row">
             <div class="col-md-4">
                 &nbsp;
@@ -47,10 +56,10 @@
             <div class="col-md-5">
                 <div class="padding-10">
                     <span>From</span>
-                    <input kendo-time-picker id="time" ng-model="fromTime" style="width: 25%" />
+                    <input kendo-time-picker id="time" class="form-control" ng-model="fromTime" style="width: 25%" />
 
                     <span>To</span>
-                    <input kendo-time-picker id="time" ng-model="toTime" style="width: 25%" />
+                    <input kendo-time-picker id="time" class="form-control" ng-model="toTime" style="width: 25%" />
                     <button type="button" class="btn btn-info btn-form" name="time" ng-model="value.time" ng-click="addTime()" style="float: right;">Add Time</button>
                 </div>
 
@@ -59,17 +68,16 @@
             <div class="col-md-3">
                 <div class="padding-10">
                     <ul>
-                        <li ng-repeat="time in fromtimeList" style="width: 60%">{{time.fromTime}}-{{time.toTime}}
+                        <li ng-repeat="time in fromtimeList">
+                            <div class="padding-10">
+                            {{time.fromTimeEveryday}}-{{time.toTimeEveryday}}
                             <button type="button" ng-click="removeEverydayTime(time)" class="btn btn-danger btn-xs " style="float: right;">x</button>
-                        </li>
+                        </div>
+                                </li>
 
                     </ul>
                 </div>
-                <style>
-                    .btn {
-                        border-radius: 3px !important;
-                    }
-                </style>
+                
             </div>
         </div>
         <div class="row">
@@ -122,37 +130,37 @@
                     </div>
 
                     <div class="row">
-                            <div class="padding-10">
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="sunday" />Sun</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="monday" />Mon</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="tuesday" />Tue</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="wednesday" />Wed</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="thursday" />Thu</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="friday" />Fri</label>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" name="checkday" ng-model="satday" />Sat</label>
-                            </div>
+                        <div class="padding-10">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="sunday" />Sun</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="monday" />Mon</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="tuesday" />Tue</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="wednesday" />Wed</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="thursday" />Thu</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="friday" />Fri</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkday" ng-model="satday" />Sat</label>
                         </div>
-                            <div class="padding-10">
-                                <button type="button" ng-model="addweekly" class="btn btn-info btn-form" ng-click="cloneweekly()" style="float: right;">Add Weekly</button>
-                            </div>
-                        
+                    </div>
+                    <div class="padding-10">
+                        <button type="button" ng-model="addweekly" class="btn btn-info btn-form" ng-click="cloneweekly()" style="float: right;">Add Weekly</button>
+                    </div>
+
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="row">
                         <div class="padding-10">
                             <span>From</span>
-                            <input kendo-time-picker id="time" ng-model="weeklyFromTime" style="width: 38%" />
+                            <input kendo-time-picker id="time" class="form-control" ng-model="weeklyFromTime" style="width: 38%" />
                             <span>To</span>
-                            <input kendo-time-picker id="time" ng-model="weeklyToTime" style="width: 38%" />
-                            
+                            <input kendo-time-picker id="time" class="form-control" ng-model="weeklyToTime" style="width: 38%" />
+
                             <div class="padding-10">
                                 <button type="button" class="btn btn-info btn-form" name="weeklyTimeAdd" ng-model="weeklyAddTime" ng-click="addTimeforWeekly()" style="float: right;">Add Time</button>
                             </div>
@@ -161,8 +169,12 @@
 
                     <div class="padding-10">
                         <ul>
-                            <li ng-repeat="weeklytime in timeForWeekly">{{weeklytime.fromTime}}-{{weeklytime.toTime}}
-                               <button type="button" ng-click="removeWeeklyTime(weeklytime)" class="btn btn-danger btn-xs" style="float: right;">x</button></li>
+                            <li ng-repeat="weeklytime in timeForWeekly">
+                                <div class="padding-10">
+                                {{weeklytime.fromTimeWeekly}}-{{weeklytime.toTimeWeekly}}
+                               <button type="button" ng-click="removeWeeklyTime(weeklytime)" class="btn btn-danger btn-xs" style="float: right;">x</button>
+                                    </div>
+                                    </li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +203,7 @@
                             <div class="demo section k-content">
                                 <input kendo-date-picker
                                     ng-model="dateString"
-                                    k-ng-model="dateObject" />
+                                    k-ng-model="dateObject" class="form-control"/>
 
                             </div>
                         </div>
@@ -204,11 +216,21 @@
                     </div>
                 </div>
                 <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <div class="row">
                     <div class="col-sm-8">
-                        <div class="padding-10">
+                        <div>
                             <ul>
-                                <li ng-repeat="date in dateList">{{date.date | date:"EEEE, MMMM d, yyyy"}}
-                                <button type="button" ng-click="removeDate(date)" class="btn btn-danger btn-xs" style="float: right;">x</button></li>
+                                <li ng-repeat="date in dateList">
+                                    <div class="padding-10">
+                                        {{date.date | date:"EEEE, MMMM d, yyyy"}}
+                                <button type="button" ng-click="removeDate(date)" class="btn btn-danger btn-xs" style="float: right;">x</button>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -222,9 +244,9 @@
 
                     <div class="padding-10">
                         <span>From</span>
-                        <input kendo-time-picker id="time" ng-model="monthlyFromTime" style="width: 38%" />
+                        <input kendo-time-picker id="time" class="form-control" ng-model="monthlyFromTime" style="width: 38%" />
                         <span>To</span>
-                        <input kendo-time-picker id="time" ng-model="monthlyToTime" style="width: 38%" />
+                        <input kendo-time-picker id="time" class="form-control" ng-model="monthlyToTime" style="width: 38%" />
 
                         <div class="padding-10">
                             <button type="button" ng-model="monthlytimeAdd" class="btn btn-info btn-form" ng-click="addTimeForMonthly()" style="float: right;">Add Time</button>
@@ -233,8 +255,12 @@
                 </div>
                 <div class="padding-10">
                     <ul>
-                        <li ng-repeat="monthlytime in timeforMonthly">{{monthlytime.fromTime}}-{{monthlytime.toTime}}
-                                <button type="button" ng-click="removeMonthlyTime(monthlytime)" class="btn btn-danger btn-xs" style="float: right;">x</button></li>
+                        <li ng-repeat="monthlytime in timeforMonthly">
+                            <div class="padding-10">
+                                {{monthlytime.fromTimeMonthly}}-{{monthlytime.toTimeMonthly}}
+                                <button type="button" ng-click="removeMonthlyTime(monthlytime)" class="btn btn-danger btn-xs" style="float: right;">x</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

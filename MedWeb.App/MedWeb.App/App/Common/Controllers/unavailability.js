@@ -25,26 +25,26 @@ app.controller ("unavailable", function ($scope) {
     $scope.timeList = [];
     $scope.addTime = function () {
         var tempTimeforEveryday = {
-            fromTime: $scope.fromTime,
-            toTime: $scope.toTime
+            fromTimeEveryday: $scope.fromTime,
+            toTimeEveryday: $scope.toTime
         };
         $scope.timeList.push(tempTimeforEveryday);
     };
     $scope.weeklytimeList = [];
     $scope.addWeeklyTime = function () {
         var tempTimeforWeekly = {
-            fromTime: $scope.weeklyfromTime,
-            toTime: $scope.weeklytoTime
+            fromTimeWeekly: $scope.weeklyfromTime,
+            toTimeWeekly: $scope.weeklytoTime
         };
         $scope.weeklytimeList.push(tempTimeforWeekly);
     };
-    $scope.MonthlytimeList = [];
+    $scope.monthlytimeList = [];
     $scope.addTimeForMonthly = function () {
         var tempTimeForMonthly = {
-            fromTime: $scope.monthlyfromTime,
-            toTime: $scope.monthlytoTime
+            fromTimeMonthly: $scope.monthlyfromTime,
+            toTimeMonthly: $scope.monthlytoTime
         };
-        $scope.MonthlytimeList.push(tempTimeForMonthly);
+        $scope.monthlytimeList.push(tempTimeForMonthly);
     };
 
     $scope.removeEverydayTime = function (time) {

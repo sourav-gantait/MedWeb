@@ -1,5 +1,14 @@
 ﻿<div class="form-group" role="form" ng-controller="unavailable">
     <form name="unavailableDoctor" role="form">
+        <style>
+            .form-control {
+                border-radius: 3px !important;
+            }
+
+            .btn {
+                border-radius: 3px !important;
+            }
+        </style>
         <div class="row">
             <div class="col-md-4">
                 &nbsp;
@@ -54,13 +63,16 @@
                 </div>
             </div>
             <div class="col-md-3">
+                <ul>
 
-                <div class="padding-10">
-                    <ul>
-                        <li ng-repeat="time in timeList">{{time.fromTime}}-{{time.toTime}}
-                            <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeEverydayTime(time)">x</button></li>
-                    </ul>
-                </div>
+                    <li ng-repeat="time in timeList">
+                        <div class="padding-10">
+                            {{time.fromTimeEveryday}}-{{time.toTimeEveryday}}
+                            <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeEverydayTime(time)">x</button>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
         <div class="row">
@@ -145,8 +157,12 @@
                     </div>
                     <div class="padding-10">
                         <ul>
-                            <li ng-repeat="weeklytime in weeklytimeList">{{weeklytime.fromTime}}-{{weeklytime.toTime}}
-                                <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeTime(weeklytime)">x</button></li>
+                            <li ng-repeat="weeklytime in weeklytimeList">
+                                <div class="padding-10">
+                                    {{weeklytime.fromTimeWeekly}}-{{weeklytime.toTimeWeekly}}
+                                <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeTime(weeklytime)">x</button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
@@ -155,14 +171,7 @@
             <div class="row">
                 &nbsp;
             </div>
-            <style>
-                .form-control {
-                    border-radius: 3px !important;
-                }
-                    .btn {
-                        border-radius: 3px !important;
-                    }
-                </style>
+
             <div class="row">
                 <div class="col-md-3">
                     &nbsp;
@@ -192,15 +201,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-7">
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
                             <div>
                                 <ul>
-                                    <li ng-repeat="date in dateList">{{date.date | date:"EEEE, MMMM d, yyyy " }}
-                                <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeDate(date)">x</button></li>
+                                    <li ng-repeat="date in dateList">
+                                        <div class="padding-10">
+                                            {{date.date | date:"EEEE, MMMM d, yyyy " }}
+                                <button type="button" class="btn btn-danger btn-xs" style="float: right;" ng-click="removeDate(date)">x</button>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-4">
                             &nbsp;
                         </div>
                     </div>
@@ -219,8 +238,11 @@
                     </div>
                     <div class="padding-10">
                         <ul>
-                            <li ng-repeat="time in timeForMonthly">
-                                <button type="button" class="btn btn-danger btn-xs" ng-click="removeTimeForMonthly(monthlytime)" style="float:right;">x</button>
+                            <li ng-repeat="time in monthlytimeList">
+                                <div class="padding-10">
+                                    {{time.fromTimeMonthly}}-{{time.toTimeMonthly}}
+                                <button type="button" class="btn btn-danger btn-xs" ng-click="removeTimeForMonthly(monthlytime)" style="float: right;">x</button>
+                                </div>
                             </li>
                         </ul>
                     </div>
