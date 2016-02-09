@@ -56,6 +56,7 @@
     <Content Include="App\Common\Controllers\indexController.js" />
     <Content Include="App\Common\Controllers\loginController.js" />
     <Content Include="App\Common\Controllers\signUp.js" />
+    <Content Include="App\Common\Controllers\unavailability.js" />
     <Content Include="App\Common\Directives\imageCrop.js" />
     <Content Include="App\Common\Directives\messageBar.js" />
     <Content Include="App\Common\logger.js" />
@@ -79,6 +80,7 @@
     <Content Include="App\Layout\sidebar.js" />
     <Content Include="App\Layout\topnav.html" />
     <Content Include="App\Layout\widgetheader.html" />
+    <Content Include="App\Modules\Schedule\Views\unavailability.html" />
     <Content Include="App\services\datacontext.js" />
     <Content Include="App\services\directives.js" />
     <Content Include="App\Style\custom.css" />

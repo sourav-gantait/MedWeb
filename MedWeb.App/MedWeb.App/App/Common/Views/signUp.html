@@ -1,6 +1,15 @@
 ﻿<div class="form-login" role="form" ng-controller="signUp as vm">
   <!--  <h2 class="form-login-heading">Sign Up</h2>-->
       <form  name="userDetails"; ng-show="vm.toggleStep1">
+          <style>
+                .form-control {
+                    border-radius: 3px !important;
+                }
+
+                .btn {
+                    border-radius: 3px !important;
+                }
+            </style>
         <div class="row">
              <div class="col-md-4">
                 &nbsp;
@@ -44,19 +53,17 @@
                 </div>
 
                 <div class="padding-10">
-                    <button class="btn btn-info  btn-form" type="button" data-ng-click="vm.showStep2()"
+                    <button class="btn btn-info  btn-form" ng-class="{disabled: userDetails.DOB.$error.required || userDetails.LastName.$error.required ||
+                        userDetails.FirstName.$error.required ||
+                        userDetails.LastName.$error.maxlength ||
+                        userDetails.FirstName.$error.maxlength}" type="button" data-ng-click="vm.showStep2()"
                         ng-disabled="userDetails.DOB.$error.required || 
                         userDetails.LastName.$error.required ||
                         userDetails.FirstName.$error.required ||
                         userDetails.LastName.$error.maxlength ||
                         userDetails.FirstName.$error.maxlength">Proceed</button>
                 </div>
-                <style>
-                    .btn btn-info btn-form[disabled] {
-                        background-color:chocolate;
-                    }
-                </style>
-              
+                
             </div>  
               <div class="col-md-4">
                 &nbsp;
